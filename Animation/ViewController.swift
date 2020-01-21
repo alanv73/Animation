@@ -22,7 +22,6 @@ class ViewController: UIViewController {
         if counter == 19 {
             counter = 0
         }
-        
     }
     
     override func viewDidLoad() {
@@ -33,11 +32,10 @@ class ViewController: UIViewController {
     @IBAction func startClick(_ sender: Any) {
         if !timer.isValid {
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(ViewController.animate), userInfo: nil, repeats: true)
-            btnStartStop.titleLabel?.text = "Stop Animation"
+            btnStartStop.setTitle("Stop Animation", for: [])
         } else {
             timer.invalidate()
-            btnStartStop.titleLabel?.text = "Start Animation"
-            
+            btnStartStop.setTitle("Start Animation", for: [])
         }
         
     }
