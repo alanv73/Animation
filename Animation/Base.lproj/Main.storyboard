@@ -60,6 +60,14 @@
                                     <action selector="blinkClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="miG-0G-byb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIN-wB-LUa">
+                                <rect key="frame" x="188" y="705" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Move"/>
+                                <connections>
+                                    <action selector="moveClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ybK-3r-U1z"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRo-gu-Zwp">
                                 <rect key="frame" x="20" y="554" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
