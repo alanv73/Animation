@@ -36,10 +36,10 @@ class ViewController: UIViewController {
     
     
     @IBAction func fadeInClick(_ sender: Any) {
-        image.alpha = 0
+        image.alpha = 1
         
-        UIView.animate(withDuration: 1, animations: {self.image.alpha = 1})
-        
+        UIView.animate(withDuration: 1, animations: {self.image.alpha = 0}) { finished in UIView.animate(withDuration: 1, delay: 0.5, animations: {self.image.alpha = 1})
+            }
     }
     
     @IBAction func slideInClick(_ sender: Any) {
