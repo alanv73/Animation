@@ -133,26 +133,55 @@ class ViewController: UIViewController {
 
         image.frame = CGRect(x: 0, y:0, width: 0, height: 0)
         
-        UIView.animate(withDuration: 1.3, delay: 0.3, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.5, options: UIView.AnimationOptions.curveEaseInOut, animations: ({self.image.frame = CGRect(x: iCenterX - (iWidth / 2), y: iCenterY - (iHeight / 2), width: iWidth, height: iHeight)}), completion: nil)
+        UIView.animate(
+            withDuration: 1.3,
+            delay: 0.3,
+            usingSpringWithDamping: 0.3,
+            initialSpringVelocity: 0.5,
+            options: UIView.AnimationOptions.curveEaseInOut,
+                animations: (
+                    {
+                        self.image.frame = CGRect(
+                            x: iCenterX - (iWidth / 2),
+                            y: iCenterY - (iHeight / 2),
+                            width: iWidth,
+                            height: iHeight
+                        )
+                    }
+                ),
+            completion: nil
+        )
     }
     
     @IBAction func growClick(_ sender: Any) {
         let iWidth = image.frame.width
         let iHeight = image.frame.height
         
-        UIView.animate(withDuration: 1.3, animations: {
-            self.image.frame.size.width -= self.image.frame.size.width - 1
-            self.image.frame.size.height -= self.image.frame.size.height - 1
-        }) {
-            finished in UIView.animate(withDuration: 1.3, delay: 0.5, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.5, options: UIView.AnimationOptions.curveEaseInOut, animations: {
-                self.image.frame.size.width += iWidth
-                self.image.frame.size.height += iHeight
-            })
+        UIView.animate(
+            withDuration: 1.3,
+            animations: {
+                self.image.frame.size.width -= self.image.frame.size.width - 1
+                self.image.frame.size.height -= self.image.frame.size.height - 1
+            }
+        ) {
+            finished in UIView.animate(
+                withDuration: 1.3,
+                delay: 0.5,
+                usingSpringWithDamping: 0.3,
+                initialSpringVelocity: 0.5,
+                options: UIView.AnimationOptions.curveEaseInOut,
+                    animations: {
+                        self.image.frame.size.width += iWidth
+                        self.image.frame.size.height += iHeight
+                    }
+            )
         }
     }
     
     @IBAction func rotateClick(_ sender: Any) {
-        let rotation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+        let rotation: CABasicAnimation = CABasicAnimation(
+            keyPath: "transform.rotation.z"
+        )
         rotation.toValue = NSNumber(value: Double.pi * 2)
         rotation.duration = 0.5
         rotation.isCumulative = true
@@ -165,13 +194,29 @@ class ViewController: UIViewController {
             blinkTimer.invalidate()
             image.isHidden = false
         } else {
-            blinkTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(ViewController.blinkAction), userInfo: nil, repeats: true)
+            blinkTimer = Timer.scheduledTimer(
+                timeInterval: 0.5,
+                target: self,
+                selector: #selector(
+                    ViewController.blinkAction
+                ),
+                userInfo: nil,
+                repeats: true
+            )
         }
     }
     
     @IBAction func startClick(_ sender: Any) {
         if !timer.isValid {
-            timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(ViewController.animate), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(
+                timeInterval: 0.1,
+                target: self,
+                selector: #selector(
+                    ViewController.animate
+                ),
+                userInfo: nil,
+                repeats: true
+            )
             btnStartStop.setTitle("Stop Animation", for: [])
         } else {
             timer.invalidate()
@@ -179,7 +224,5 @@ class ViewController: UIViewController {
         }
         
     }
-    
-    
 }
 
