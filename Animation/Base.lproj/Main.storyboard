@@ -28,14 +28,6 @@
                                     <action selector="startClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hg9-g0-auJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRo-gu-Zwp">
-                                <rect key="frame" x="26" y="554" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Fade"/>
-                                <connections>
-                                    <action selector="fadeInClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7qY-Cz-3SY"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60l-DG-udk">
                                 <rect key="frame" x="182" y="554" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -66,6 +58,14 @@
                                 <state key="normal" title="Blink"/>
                                 <connections>
                                     <action selector="blinkClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="miG-0G-byb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRo-gu-Zwp">
+                                <rect key="frame" x="20" y="554" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Fade"/>
+                                <connections>
+                                    <action selector="fadeInClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7qY-Cz-3SY"/>
                                 </connections>
                             </button>
                         </subviews>

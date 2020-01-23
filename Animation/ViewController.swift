@@ -45,10 +45,6 @@ class ViewController: UIViewController {
     @IBAction func slideInClick(_ sender: Any) {
         image.center = CGPoint(x: image.center.x - 500, y: image.center.y)
         
-//        UIView.animate(withDuration: 2) {
-//            self.image.center = CGPoint(x: self.image.center.x + 500, y: self.image.center.y)
-//        }
-        
         UIView.animate(withDuration: 1.3, delay: 0.3, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.5, options: UIView.AnimationOptions.curveEaseInOut, animations: ({self.image.center = CGPoint(x: self.image.center.x + 500, y: self.image.center.y)}), completion: nil)
         
     }
@@ -60,11 +56,7 @@ class ViewController: UIViewController {
         let iCenterY = image.center.y
         
         image.frame = CGRect(x: 0, y:0, width: 0, height: 0)
-        
-//        UIView.animate(withDuration: 1) {
-//            self.image.frame = CGRect(x: iCenterX - (iWidth / 2), y: iCenterY - (iHeight / 2), width: iWidth, height: iHeight)
-//        }
-        
+      
         UIView.animate(withDuration: 1.3, delay: 0.3, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.5, options: UIView.AnimationOptions.curveEaseInOut, animations: ({self.image.frame = CGRect(x: iCenterX - (iWidth / 2), y: iCenterY - (iHeight / 2), width: iWidth, height: iHeight)}), completion: nil)
     }
     
